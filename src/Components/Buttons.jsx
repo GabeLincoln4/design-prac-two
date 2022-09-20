@@ -1,16 +1,14 @@
 import React from 'react';
 import Heading from './Heading.jsx';
 import TextSection from './TextSection.jsx';
+import Grid from './Grid.jsx';
 
 function EditButtons(props){
     return (
         <div className={"grid grid-rows-3 grid-cols-4 " + (props.numOfCols) + " h-screen"}>
             <div className={"bg-yellow-300 " + (props.topBarLength) + " row-start-1 row-span-3 col-span-3"}>
                 <Heading /> 
-                <div className="grid grid-cols-1 place-content-center h-5/6">
-                    <TextSection />
-                </div>
-                
+                <Grid comp={<TextSection />} />
             </div>
             <div className={"bg-red-500 " + (props.startPoint) + " row-start-1 text-white"}>01</div>
             <div className={"bg-green-500 " + (props.startPoint) + " row-start-2 text-white"}>02</div>
